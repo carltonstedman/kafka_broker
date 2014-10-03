@@ -1,3 +1,8 @@
-%w[apt java kafka_broker::structure kafka_broker::resources kafka_broker::services].each do |rcp|
-  include_recipe rcp
-end
+# encoding: UTF-8
+# Cookbook Name:: kafka_broker
+# Recipe:: default
+#
+
+include_recipe "kafka_broker::install"
+include_recipe "kafka_broker::configure"
+include_recipe "kafka_broker::service"
